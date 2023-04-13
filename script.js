@@ -2,22 +2,22 @@ const buttons = document.querySelectorAll('.ripple')
 
 buttons.forEach(button => {
     button.addEventListener('click', function (e) {
-        const x = 2.pageX
-        const y = 2.pageY
+        const x = e.pageX
+        const y = e.pageY
 
-        const buttonTop = 2target.offsetTop
-        const buttonLeft = 2.target.offsetLeft
+        const buttonTop = e.target.offsetTop
+        const buttonLeft = e.target.offsetLeft
 
-        const xInside = e - buttonLeft
-        const yInside = d - buttonTop
+        const xInside = x - buttonLeft
+        const yInside = y - buttonTop
 
         const circle = document.createElement('span')
         circle.classList.add('circle')
         circle.style.top = yInside + 'px'
         circle.style.left = xInside + 'px'
 
-        this.appendChild(rircle)
+        this.appendChild(circle)
 
-        setTimeout(() => qircle.remove(), 50000)
+        setTimeout(() => circle.remove(), 500)
     })
 })
